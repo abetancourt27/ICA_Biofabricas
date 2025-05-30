@@ -92,77 +92,45 @@ class BiopreparadosPage extends StatelessWidget {
                 ],
               ),
             ),
-            // Botones de navegación en la parte inferior
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                color: Colors.transparent,
-                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        print('Configuración presionada');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFE15919), // Color naranja
-                        shape: const CircleBorder(),
-                        padding: const EdgeInsets.all(16),
-                      ),
-                      child: const Icon(
-                        Icons.settings_outlined,
-                        color: Colors.white,
-                        size: 24,
-                      ),
+            // Botones inferiores
+            Container(
+              color: Colors.transparent,
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFE15919), // Color naranja
+                      shape: const CircleBorder(),
+                      padding: const EdgeInsets.all(16),
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFE15919), // Color naranja
-                        shape: const CircleBorder(),
-                        padding: const EdgeInsets.all(16),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_back_ios_sharp,
-                        color: Colors.white,
-                        size: 24,
-                      ),
+                    child: const Icon(
+                      Icons.arrow_back_ios_sharp,
+                      color: Colors.white,
+                      size: 24,
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/panelPrincipal');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFE15919), // Color naranja
-                        shape: const CircleBorder(),
-                        padding: const EdgeInsets.all(16),
-                      ),
-                      child: const Icon(
-                        Icons.home,
-                        color: Colors.white,
-                        size: 24,
-                      ),
+                  ),
+                  const SizedBox(width: 40), // Espacio entre los dos botones
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/panelPrincipal');
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFE15919), // Color naranja
+                      shape: const CircleBorder(),
+                      padding: const EdgeInsets.all(16),
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        print('Perfil presionado');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFE15919), // Color naranja
-                        shape: const CircleBorder(),
-                        padding: const EdgeInsets.all(16),
-                      ),
-                      child: const Icon(
-                        Icons.person_2_outlined,
-                        color: Colors.white,
-                        size: 24,
-                      ),
+                    child: const Icon(
+                      Icons.home,
+                      color: Colors.white,
+                      size: 24,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],

@@ -74,38 +74,8 @@ class BiofabricaPage extends StatelessWidget {
               color: Colors.transparent,
               padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      print('Configuración presionada');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFE15919), // Color naranja
-                      shape: const CircleBorder(),
-                      padding: const EdgeInsets.all(16),
-                    ),
-                    child: const Icon(
-                      Icons.settings_outlined,
-                      color: Colors.white,
-                      size: 24,
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      print('Perfil presionado');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFE15919), // Color naranja
-                      shape: const CircleBorder(),
-                      padding: const EdgeInsets.all(16),
-                    ),
-                    child: const Icon(
-                      Icons.person_2_outlined,
-                      color: Colors.white,
-                      size: 24,
-                    ),
-                  ),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
@@ -121,6 +91,7 @@ class BiofabricaPage extends StatelessWidget {
                       size: 24,
                     ),
                   ),
+                  const SizedBox(width: 40), // Espacio entre los dos botones
                   ElevatedButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/panelPrincipal');
